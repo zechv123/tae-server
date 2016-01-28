@@ -6,6 +6,7 @@
              version="2.0">
 
     <persistence-unit name="jpa.unit">
+        <class>kr.tae.server.domain.AddVideos</class>
         <class>kr.tae.server.domain.Post</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
     </persistence-unit>

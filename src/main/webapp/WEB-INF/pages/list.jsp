@@ -18,7 +18,7 @@
     </thread>
     <tbody>
     <c:choose>
-        <c:when test="${fn:length(postList)}==0}">
+        <c:when test="${fn:length(postList)==0}">
             <tr>
                 <td></td>
                 <td>등록된 글이 없습니다.</td>
@@ -35,5 +35,19 @@
     </c:choose>
     </tbody>
 </table>
+<br><br>-----------------------------------------------<br>
+Hello Google App Engine!
+<br>
+Following Links lead to specific page! :)
+<br>
+<br>
+/list: <a href="/list">Board Function</a>
+<br>
+/basiccalculator: <a href="/basiccalculator">Calculator Function</a>
+<br>
+/helloworld: <a href="/helloworld">HelloWorld Function</a>
+<br>
+/videoslist: <a href="/videoslist">Video List Function</a>
+<br>-----------------------------------------------<br>
 </body>
 </html>
