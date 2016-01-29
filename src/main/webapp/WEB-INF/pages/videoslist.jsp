@@ -19,10 +19,11 @@
                 <th>| 영상번호 | </th>
                 <th>추천인 | </th>
                 <th>원작자 | </th>
-                <th>길이 | </th>
+                <th>길이 (초) | </th>
                 <th>추천성별 | </th>
                 <th>추천나이 | </th>
                 <th>평점 | </th>
+                <td>열어보기 | </td>
             </tr>
         </thread>
         <tbody>
@@ -44,13 +45,18 @@
                         <td>${post.preferSex}</td>
                         <td>${post.preferAge}</td>
                         <td>미구현</td>
+                        <td><a href = "/videoinfo?????/${post.id}">열어보기(미구현)</a></td>
                     </tr>
                 </c:forEach>
             </c:otherwise>
         </c:choose>
         </tbody>
     </table>
-
+    <br><p>다음 창에 영상 번호를 입력하면 열람이 가능합니다.</p>
+    <form method="post" action="/videoinfo/videonumber">
+        <br><label> 영상번호 : <input type="text" name = "videonumber"></label>
+        <input type="submit" value="열람">
+    </form>
     <br><br>-----------------------------------------------<br>
     Hello Google App Engine!
     <br>
