@@ -28,7 +28,7 @@
             <c:forEach items = "${postList}" var = "post">
                 <tr>
                     <td>${post.id}</td>
-                    <td>${post.title}</td>
+                    <td><a href = "/view/${post.id}">${post.title}</a></td>
                 </tr>
             </c:forEach>
         </c:otherwise>
