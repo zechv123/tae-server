@@ -20,11 +20,20 @@ public class AddVideosController {
     @Autowired
     private AddVideosRepository addVideosRepository;
 
+    @RequestMapping(value = "/video/basic/list")
+    public ModelAndView videoBasicPropertyList() {
+        List<AddVideos> postList = addVideosRepository.findAll();
+        ModelAndView modelAndView = new ModelAndView("video_basic_list");
+        modelAndView.addObject("video_basic_list", postList);
+        return modelAndView;
+    }
+
     @RequestMapping(value = "/savevideo")
     public String save(HttpServletRequest request) {
         String title = request.getParameter("title");
         String url = request.getParameter("url");
         String creator = request.getParameter("creator");
+
         String recommender = request.getParameter("recommender");
         Short length = Short.parseShort(request.getParameter("length"));
         Integer youtubeTotalViews = Integer.parseInt(request.getParameter("youtubeTotalViews"));
